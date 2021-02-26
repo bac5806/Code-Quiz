@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+}
+
+body {
+    background-color: rgb(165, 196, 211);
+}
+
+header {
+    background-color: darkcyan;
+    min-height: 50px;
+}
+
+header h1 {
+    font-size: 42px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 15px;
+}
+
+.scoreDisplayContainer {
+    min-height: 50px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    line-height: 90px;
+    background-color: black;
+}
+
+.scoreDisplayContainer ul
+{
+    padding:25px;
+    margin-bottom: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.scoreDisplayContainer ul li {
+    font-size: 38px;
+    font-weight: 70px;
+    color: dodgerblue;
+    border-bottom: 2px solid crimson;
+}
+

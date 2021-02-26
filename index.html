@@ -11,22 +11,58 @@
     <body>
 
         <header>
-            <a href="#">View Highscores</a>
-            <p>Timer: <span>0</span></p>
+            <a href="./highScores/highScores.html" target="_blank">View Highscores</a>
+            <p>Timer: <span id="time"> </span></p>
         </header>
-        <h1>
+        <h1 id="head1">
             Coding Quiz Challenge
         </h1>
 
-        <main>
-            <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score time by 10 seconds. Good Luck!</p>
+        <main id="main">
+            <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will take 10 seconds off your time. Good Luck!</p>
 
             <div class="buttonContainer">
-                <button id="startQuiz" style="font-family: Lobster, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Start Quiz</button>
+                <button type="button" id="startButton" style="font-family: Lobster, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Start Quiz</button>
             </div>
         </main>
 
+        <div class="questionContainer">
+            <p id=quizQuestions></p>
+            <div class="questionButtonContainer">
+                
+                <!-- answer button 1 -->
+                <button type="button" id="questionButton1"></button>
 
+                <!-- answer button 2 -->
+                <button type="button" id="questionButton2"></button>
+
+                <!-- answer button 3 -->
+                <button type="button" id="questionButton3"></button>
+
+                <!-- answer button 4 -->
+                <button type="button" id="questionButton4"></button>
+                
+            </div>
+
+            <h3 id="answerDisplay"></h3>
+            <div class="nextButtonContainer">
+                <button type="button" id="nextButton" style="font-family: Lobster, Cambria;">Next Question</button>
+            </div>
+        </div>
+
+        <div class="endGameContainer">
+            <p>Score: <span id="showScore"></span></p>
+            <form id="submit">
+                <label for="fname" style="font-family: Lobster, Cambria;">Enter Name:<br></label>
+                <input type="text" id="fname">
+            </form>
+        </div>
+
+        <div class="userOptions">
+            <button type="button" id="refreshPage" style="font-family: Lobster, Cambria;">Try Again?</button>
+            <button type="button" id="clearSavedInfo" style="font-family: Lobster, Cambria;">Clear User Info</button>
+        </div>
+
+        <script src="assets/javascript/script.js"></script>
     </body>
-    <script src="assets/javascript/script.js"></script>
 </html>
