@@ -4,13 +4,16 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+        <!-- google fonts links -->
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
         <title>Coding Quiz Challenge</title>
     </head>
     <body>
 
+        <!-- header tag -->
         <header>
+            <!-- view high scores link -->
             <a href="./highScores/highScores.html" target="_blank">View Highscores</a>
             <p>Timer: <span id="time"> </span></p>
         </header>
@@ -18,16 +21,20 @@
             Coding Quiz Challenge
         </h1>
 
+        <!-- main tag -->
         <main id="main">
             <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will take 10 seconds off your time. Good Luck!</p>
 
+            <!-- start quiz button -->
             <div class="buttonContainer">
                 <button type="button" id="startButton" style="font-family: Lobster, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Start Quiz</button>
             </div>
         </main>
 
+        <!-- question and answer container -->
         <div class="questionContainer">
-            <p id=quizQuestions></p>
+            <!--  -->
+            <p id="quizQuestions"></p>
             <div class="questionButtonContainer">
                 
                 <!-- answer button 1 -->
@@ -44,25 +51,29 @@
                 
             </div>
 
+            <!-- h3 tag for "correct" or"incorrect" answer  -->
             <h3 id="answerDisplay"></h3>
+            <!-- next button container -->
             <div class="nextButtonContainer">
+                <!-- next button -->
                 <button type="button" id="nextButton" style="font-family: Lobster, Cambria;">Next Question</button>
             </div>
         </div>
-
+        <!-- end game content container -->
         <div class="endGameContainer">
             <p>Score: <span id="showScore"></span></p>
+            <!-- form tag for submitting information -->
             <form id="submit">
                 <label for="fname" style="font-family: Lobster, Cambria;">Enter Name:<br></label>
                 <input type="text" id="fname">
             </form>
         </div>
-
+        <!-- try again and clear user information buttons -->
         <div class="userOptions">
             <button type="button" id="refreshPage" style="font-family: Lobster, Cambria;">Try Again?</button>
             <button type="button" id="clearSavedInfo" style="font-family: Lobster, Cambria;">Clear User Info</button>
         </div>
-
+        <!-- javascript source -->
         <script src="assets/javascript/script.js"></script>
     </body>
 </html>

@@ -26,7 +26,7 @@ var isDisabledButton = false;
 // variable to determine that user has selected an answer
 var hasAnswered = false;
 
-// array of questions for quiz
+// array of questions
 var questionBank = ["Commonly used data types DO NOT include: ", "The condition in an if / else statement is enclosed within _____.", "Arrays in Javascript can used to store _____.", "String values must be enclosed within _____ when being assigned to variables.", "A very helpful too used during development and debugging for printing content to the debugger is:"];
 
 // arrays of answers
@@ -145,11 +145,16 @@ function nextQuestion() {
             ++questionBankIndex;
             break;
         case 5:
+            // set question display to none
             questionContEl.style.display = "none";
+            // make end-game content visible
             endGameEl.style.visibility = "visible";
             userOptionsEl.style.visibility = "visible";
+            // show final score
             showScoreEl.textContent = userInfo.score;
+            // stop timer
             clearInterval(timerInterval);
+            // set user time for storage
             userInfo.timeLeft = secondsLeft;
             break;
     }
@@ -194,14 +199,19 @@ startButton.addEventListener("click", function(event) {
             timerInterval = setInterval(function() {
             secondsLeft--;
             timeEl.textContent = secondsLeft;
-
+            // checks if timers is at or below 0
             if(secondsLeft <= 0) {
                 // Stops execution of action at set interval
                 clearInterval(timerInterval);
+                // send an alert to the user
                 alert("Your time has run out.");
+                // set question bank index to 5
                 questionBankIndex = 5;
+                // set timer to 0 so that it doesn't display negative
                 secondsLeft = 0;
+                // show time left as 0
                 timeEl.textContent = secondsLeft;
+                // call next question
                 nextQuestion();
             }
         }, 1000);
@@ -301,10 +311,12 @@ questionButton4.addEventListener("click", function(event) {
     rightWrong(isRight);
 });
 
+// next button event listener
 nextButton.addEventListener("click", function(event) {
     // prevent default behavior
     event.preventDefault();
 
+    // if user has chosen an answer, turn on buttons
     if (hasAnswered) {
         // turn on the buttons
         isDisabledButton = false;
@@ -321,8 +333,6 @@ nextButton.addEventListener("click", function(event) {
     }
 });
 
-alert.addEventListener
-
 // create save button for click event, then store the info in local
 submit.addEventListener("submit", function(event) {
     // prevent default behavior
@@ -335,6 +345,7 @@ submit.addEventListener("submit", function(event) {
     localStorage.setItem("UserInformation", JSON.stringify(userInfoArr));
 });
 
+// initialie function to pull stored users from local storage
 function init() {
     var storedUsers = JSON.parse(localStorage.getItem("UserInformation"));
     if (storedUsers !== null) {
