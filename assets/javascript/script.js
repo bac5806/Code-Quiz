@@ -15,6 +15,7 @@ var userOptionsEl = document.querySelector(".userOptions");
 var showScoreEl = document.querySelector("#showScore");
 var refreshPageEl = document.querySelector("#refreshPage");
 var clearSavedInfoEl = document.querySelector("#clearSavedInfo");
+var nextButtonEl = document.querySelector("#nextButton");
 
 // set starting time and put to the page
 var secondsLeft = 60;
@@ -57,6 +58,13 @@ var userInfo = {
 
 // function to display questions
 function nextQuestion() {  
+
+    if (questionBankIndex === 4) {
+        nextButtonEl.textContent = "Finish Quiz";
+    }
+    else {
+        nextButtonEl.textContent = "Next Question";
+    }
     
     // set rightAnswer as empty string
     rightAnswer = "";
