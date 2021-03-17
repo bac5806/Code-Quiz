@@ -349,6 +349,7 @@ submit.addEventListener("submit", function(event) {
     fNameInputEl.disabled = "true";
 
     userInfo.userName = fNameInputEl.value;
+    
     userInfoArr.push(userInfo);
     localStorage.setItem("UserInformation", JSON.stringify(userInfoArr));
 });
